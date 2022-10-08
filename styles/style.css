@@ -1,0 +1,152 @@
+/******************************************************************************
+
+/** 
+ * Using html as the selector will make all the elements inside it 
+ * (everything!) to have the same ruleset. This is because the parent element's
+ * rulset is inherited by every child element.
+ *
+ * Thus the following gives a global base font and font size for the whole 
+ * page.
+ * (Can be overridden by rulsets for specific elements.
+ **/
+html {
+    /* Sets size of the font being used */
+    font-size: 10px; /* px means "pixels": the base font size is now 
+                        10 pixels high /*
+
+    /* Sets the font(s) to be used for the text */
+    font-family: "Open Sans", sans-serif; /* this should be the rest of the
+                                        output obtained from Google Fonts */     
+    
+    /* Sets the (default) background color of the entire page */                   
+    background-color: #00539f; /*This is a hexadecimal number representing
+                                    a color code. In particular, a dark blue 
+                                    colour*/
+}
+
+body {
+    /* Sets the width of the body (all displayed elements) to a fixed length */
+    width: 600px; /* This forces the body to always be 600 pixels wide */
+
+    /**
+     * Sets the space around the outside of the body's border.
+     *
+     * When two values used to set properties like margin or padding:
+     * - The first value affects the element's top and bottom side
+     * (Set to 0 in this case - no vertical margin space)
+     *
+     * - The second value affects the left and right side.
+     * auto is a special value that divides the available horizontal space
+     * evenly between a pair of sides, in this case, left and right.
+     **/
+    margin: 0 auto;
+
+    /* Sets the background color of the body element. This overrides the
+    default colour set for the entire HTML page (only parts outside of the body
+    will have that colour) 
+    */         
+    background-color: #ff9500; /* This coluor code represents a reddish orange
+                                    colour, as opposed to the dark blue for the
+                                    <html> element. */
+
+    /**
+     * Sets the space around the body's content.
+     *
+     * When four values are used to set properties like margin or padding, they
+     * represent the following:
+     * - First value:  top
+     * - Second value: right
+     * - Third value:  bottom
+     * - Fourth value: left
+     *
+     * In this case, there no padding (0) is on the top of the body, and
+     * 20 pixels on the right, bottom, and left.
+     **/
+    padding: 0 20px 20px 20px;
+
+    /**
+     * Sets a line just outside the padding.
+     *
+     * When three values are used to set the border, they represent the 
+     * following:
+     * - First value:  width
+     * - Second value: style
+     * - Third value:  color
+     *
+     * They are applied on all sides of the body.
+     * In this case, a five-pixel wide, solid yellow border.
+     **/
+    border: 5px solid yellow;
+}
+
+h1 {
+
+    font-size: 60px;
+
+    /* Centres the heading */
+    text-align: center; 
+
+    /* Remove the margin areas (the main body) outside the <h1> elements. 
+    (This overides the browser's default styling for the header's margin.) 
+    */
+    margin: 0;
+
+    /* Set the padding area to be 20 pixels vertically, 
+        and to be nothing horizontally, */
+    padding: 20px 0;
+
+    /* Set text color to the same dark blue as the page's background color */
+    color: #00539f;
+
+    /**
+     * Apply shadow to the text contend of the element. Its four values are:
+     *
+     * - The first pixel value sets the horizontal offset of the shadow from
+     *   the text (how far it moves across)
+     *
+     * - The second pixel value sets the vertical offset of the shadow from
+     *   the text (how far it moves down)
+     *
+     * - The third pixel value sets the blur radius of the shadow. 
+     *   (A larger value produces a more fuzzy looking shadow.)
+     *
+     * - The fourth value sets base color of the shadow.
+     **/
+    text-shadow: 3px 3px 1px black;
+}   
+
+p, 
+li {
+    font-size: 16px;
+
+    /* Sets the vertical height occupied by each line */
+    line-height: 2;
+
+    /* Sets extra horizontal space used by each character*/
+    letter-spacing: 1px; 
+}
+
+img {
+    /**
+     * ===== On centering an Image ======
+     * The <body> is a block element, meaning it takes up space on the page.
+     * The margin applied to a block element will be respected by other
+     * elements on the page.
+     * 
+     * In contrast, images are inline elements. For the auto margin trick to
+     * work on this image (as it would for <body> as shown above) one must
+     * give it ablock-level behaviour by seting the display property to 
+     * the value block.
+     **/
+    display: block;
+    margin: 0 auto;
+
+    /* Scale the image width to 50 percept of its original size 
+    (The height will be scaled accordingly)
+    */
+    width: 50%;
+}
+/* Setting style overides for the copyright notice at bottom of the body */
+#copyright-notice{
+    font-size: 14px;
+}

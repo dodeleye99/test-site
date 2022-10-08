@@ -1,0 +1,148 @@
+<!-- The doctype - a required preamble-->
+<!DOCTYPE html>
+
+<!-- The root element, holding every element for building the document-->
+<html lang="en-US">
+
+    <!-- Holds the parts of the document not considered content made 
+        visible to the user-->
+    <head>
+        <!-- Sets the character set the document should use to UTF-8,
+            which covers most of the characters found in written 
+            languages.
+        -->
+        <meta charset="utf-8"/>
+
+        <!-- Ensures the page renders at the width of viewport.
+            This is useful for mobile users, ensuring that the
+            page renders according to the size of their screen.
+        -->
+        <meta name="viewport" content="width=device-width" />
+
+        <!-- The title of the webpage-->
+        <title>My test page</title>
+
+        <!-- Link the document to a stylesheet-->
+        <!-- Set an id so that it can be identified later-->
+        <link id="my-style" href="styles/style.css" rel="stylesheet" />
+
+        <!-- Link the document to a stylesheet to use for the page's font-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" 
+            rel="stylesheet" />
+
+        <!-- <p>
+            <strong id="copyright-notice">
+                Image Source: 
+                <a href="https://commons.wikimedia.org/wiki/File:Firefox_Nightly_logo,_2017.svg">
+                    Firefox Nightly logo 2017</a>, 
+                Mozilla Corporation, 
+                CC BY-SA 3.0
+            </strong>
+        </p>
+
+        <div>
+            <a href="https://commons.wikimedia.org/wiki/File:Firefox_Nightly_logo,_2017.svg">
+                Firefox Nightly logo 2017</a>
+        </div> -->
+            
+    </head>
+
+    <!-- The content of the document, shown to the viewer-->
+    <body>
+        <!-- Create a heading for the document -->
+        <h1> Mozilla is Cool</h1>
+        <!-- Display an image on the document -->
+        <img src="images/firefox-logo1.png" 
+            alt="flaming fox searching the globe" />
+        
+        <!-------------------------------------------------------------------->
+        <!-- Display text on the webpage-->
+        <p>At Mozilla, we're a global community of</p>
+        <!-- Create a list or words describing the company-->
+        <ul>
+            <li>technologists</li>
+            <li>thinkers</li>
+            <li>builders</li>
+        </ul>
+        <p>working together to keep the Internet alive and accessible, so 
+            people worldwide can be informed contributors and creators of the 
+            Web. We believe this act of human collaboration across an open
+            platform is essential to individual growth and our collective
+            future.
+        </p>
+        <p>Read the
+            <!-- Create a hyperlink to an external webpage, that will give 
+                more information to the user of what this webpage only
+                touches upon.-->
+            <a href="https://www.mozilla.org/en-US/about/manifesto/">
+                Mozilla Manifesto</a>
+            to learn even more about the values and principles that guide the
+            pursuit of our mission.
+        </p>
+        <!-------------------------------------------------------------------->
+
+        <!-- Create a button for personifying the header or 
+            (and another for removing the personification)-->
+        <button id="change-button">Change user </button>
+        <button id="delete-button">Delete user </button>
+        
+        <!-- Copyright Notice-->
+        <p>
+            <strong id="copyright-notice">
+                Image Source: 
+                <a href="https://commons.wikimedia.org/wiki/
+                            File:Firefox_logo,_2017.svg#file">
+                    Firefox logo 2017</a>, 
+                Mozilla Corporation, <span>CC BY 3.0</span> 
+                <!--We use <span> for wrapping the CC licence so that it can be 
+                    identified in the JavaScript program.-->
+            </strong>
+        </p>
+
+        <!-- Embed a JavaScript program into the HTML page. 
+            (Adding it near the bottom of the <body> content, since the browser 
+            reads code in the order it appears in the file. If the elements to 
+            apply the script to have not been loaded yet, the script may not 
+            work correctly.)-->
+        <script src="scripts/main.js"> </script>
+        
+    </body>
+</html>
+
+<!-- 
+* =============================================================================
+* <!DOCTYPE html> - The doctype. A required preamble. 
+*                   It ensures that the document behaves correctly.
+* 
+* <html></html>   - The <html> element. Wraps all the content of the entire
+*                   page. It is sometimes known as the root element.
+*                   Consists of the optional lang attribute, used to set the
+*                   primary language of the document.
+*
+* <head></head>   - The <head> element. Acts as a container for all the
+*                   parts to include in the HTML page that are NOT the
+*                   the content to be shown to the page's viewers. 
+*                   This includes keywords, a page description that will
+*                   appear in search results, CSS to style the content,
+*                   character set declarations, and more.
+* =============================================================================
+* <meta charset="utf-8">
+* - Sets the character set the document should use to UTF-8 which includes most 
+*   characters from the vast majority of written languages. This enables the 
+*   webpage to hanle any textual content one might put in it.
+*
+* <meta name="viewport" content="width=device-width">
+* - A viewport element, used to ensure the page renders at the width of 
+*   viewport, preventing mobile browsers from rendering pages wider than the 
+*   viewport and then shrinking them down.
+* =============================================================================
+* <title></title> — the <title> element. Sets the title of the page, which is 
+*                   the title that appears in the browser tab the page is 
+*                   loaded in. It is also used to describe the page when you 
+*                   bookmark/favorite it.
+*
+* <body></body>   — the <body> element. Contains all the content one wants to 
+*                   show to web users when they visit the page, whether that's 
+*                   text, images, videos, games, playable audio tracks, etc.
+* =============================================================================
+-->
